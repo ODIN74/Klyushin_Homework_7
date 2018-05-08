@@ -1,0 +1,11 @@
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\bin\Debug\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-icons.ico
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\bin\Debug\Task_1.exe.config
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\bin\Debug\Task_1.exe
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\bin\Debug\Task_1.pdb
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.csprojResolveAssemblyReference.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.MainForm.resources
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.Properties.Resources.resources
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.csproj.GenerateResource.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.csproj.CoreCompileInputs.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.exe
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_1\obj\Debug\Task_1.pdb

@@ -32,16 +32,17 @@ namespace Task_1
             btnReset.Enabled = true;
             btnStartGame.Enabled = false;
             menuStartGame.Enabled = false;
-            stepList.Add(newGame.Current.ToString());
+            stepList.Insert(counter, newGame.Current.ToString());
         }
 
         private void btnIncrement_Click(object sender, EventArgs e)
         {
             newGame.Incremention();
             lblCurentNumber.Text = newGame.Current.ToString();
+            
             counter++;
             lblCounter.Text = counter.ToString();
-            stepList.Add(newGame.Current.ToString());
+            stepList.Insert(counter, newGame.Current.ToString());
             if (counter > 0) btnCancel.Enabled = true; 
             if (int.Parse(lblCurentNumber.Text) == int.Parse(lblRequiredNumber.Text))
             {
@@ -74,17 +75,18 @@ namespace Task_1
             counter++;
             lblCounter.Text = counter.ToString();
             if (counter > 0) btnCancel.Enabled = true;
-            stepList.Add("Reset");
+            stepList.Insert(counter, "Reset");
         }
 
         private void btnDouble_Click(object sender, EventArgs e)
         {
             newGame.Redouble();
             lblCurentNumber.Text = newGame.Current.ToString();
+            
             counter++;
             lblCounter.Text = counter.ToString();
-            stepList.Add(newGame.Current.ToString());
-            if(counter > 0) btnCancel.Enabled = true;
+            stepList.Insert(counter, newGame.Current.ToString());
+            if (counter > 0) btnCancel.Enabled = true;
             if (int.Parse(lblCurentNumber.Text) == int.Parse(lblRequiredNumber.Text))
             {
                 lblCurentNumber.ForeColor = Color.ForestGreen;
@@ -124,51 +126,52 @@ namespace Task_1
         private void btnCancel_Click(object sender, EventArgs e)
         {
             
-                if (counter - 1 != 0)
+            if (counter - 1 != 0)
+            {
+                if (stepList[counter - 1] != "Reset")
                 {
-                    if (stepList[counter - 1] != "Reset")
-                    {
-                        lblCurentNumber.Text = stepList[counter - 1];
-                        newGame.Current = int.Parse(stepList[counter - 1]);
-                        stepList[counter] = String.Empty;
-                        counter--;
-                        lblCounter.Text = counter.ToString();
-                        if (!lblResult.Text.Equals(String.Empty))
-                    {
-                        lblResult.Text = String.Empty;
-                        lblCurentNumber.ForeColor = Color.Black;
-                        btnIncrement.Enabled = true;
-                        btnDouble.Enabled = true;
-                        btnReset.Enabled = true;
-                    }
-                    }
-                    else
-                    {
-                        newGame.Current = 1;
-                        stepList[counter] = String.Empty;
-                        counter--;
-                        lblCurentNumber.Text = "1";
-                        lblCounter.Text = counter.ToString();
-                    }
+                    lblCurentNumber.Text = stepList[counter - 1];
+                    newGame.Current = int.Parse(stepList[counter - 1]);
+                    stepList.RemoveAt(counter);
 
+
+                    if (!lblResult.Text.Equals(String.Empty))
+                    {
+                    lblResult.Text = String.Empty;
+                    lblCurentNumber.ForeColor = Color.Black;
+                    btnIncrement.Enabled = true;
+                    btnDouble.Enabled = true;
+                    btnReset.Enabled = true;
+                    btnStartGame.Enabled = false;
+                    }
                 }
                 else
                 {
-                    if (stepList[counter - 1] != "Reset")
-                    {
-                        lblCurentNumber.Text = stepList[counter - 1];
-                        stepList[counter] = String.Empty;
-                        lblCounter.Text = String.Empty;
-                        btnCancel.Enabled = false;
+                newGame.Current = 1;
+                stepList.RemoveAt(counter);
+                lblCurentNumber.Text = "1";
                 }
-                    else
-                    {
-                        newGame.Current = 1;
-                        stepList[counter] = String.Empty;
-                        lblCounter.Text = String.Empty;
-                        btnCancel.Enabled = false;
-                    }
+                counter--;
+                lblCounter.Text = counter.ToString();
+            }
+            else
+            {
+                if (stepList[counter - 1] != "Reset")
+                {
+                    lblCurentNumber.Text = stepList[counter - 1];
+                    stepList.RemoveAt(counter);
+                    lblCounter.Text = String.Empty;
+                    btnCancel.Enabled = false;
                 }
+                else
+                {
+                    newGame.Current = 1;
+                    stepList.RemoveAt(counter);
+                    stepList.Insert(counter, String.Empty);
+                    lblCounter.Text = String.Empty;
+                    btnCancel.Enabled = false;
+                }
+            }
         }
     }
 }

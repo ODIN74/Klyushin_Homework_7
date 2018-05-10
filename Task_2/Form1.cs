@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+/*Клюшин А. Используя Windows Forms, разработать игру “Угадай число”. Компьютер загадывает число от 1 до 100,
+            а человек пытается его угадать за минимальное число попыток. 
+            Для ввода данных от человека используется элемент TextBox.*/
 
 namespace Task_2
 {
@@ -76,6 +74,32 @@ namespace Task_2
         {
             this.timer1.Stop();
             MessageBox.Show(this, "В данной программе вам необходимо угадать\nчисло от 1 до 100, загаданное компьютером.", "О программе");    
+        }
+
+        private void btnCompare_Click(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (hiddenNumber == int.Parse(tbEnteredNumber.Text))
+                {
+                    counter++;
+                    lblResult.ForeColor = Color.ForestGreen;
+                    lblResult.Text = $"Вы угадали с {counter} попытки.\nЭто действительно {hiddenNumber}.";
+                    btnStartGame.Enabled = true;
+                    btnCompare.Enabled = false;
+                    tbEnteredNumber.Enabled = false;
+                }
+                else if (hiddenNumber > int.Parse(tbEnteredNumber.Text))
+                {
+                    lblResult.Text = "Загаданное число больше";
+                    counter++;
+                }
+                else
+                {
+                    lblResult.Text = "Загаданное число меньше";
+                    counter++;
+                }
+            }
         }
     }
 }

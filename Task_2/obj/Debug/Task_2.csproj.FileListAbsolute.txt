@@ -8,3 +8,13 @@ D:\Anton\C Sharp\lesson7\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.csproj.Gene
 D:\Anton\C Sharp\lesson7\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.csproj.CoreCompileInputs.cache
 D:\Anton\C Sharp\lesson7\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.exe
 D:\Anton\C Sharp\lesson7\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.pdb
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\bin\Debug\Task_2.exe.config
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\bin\Debug\Task_2.exe
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\bin\Debug\Task_2.pdb
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.csprojResolveAssemblyReference.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.MainForm.resources
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.Properties.Resources.resources
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.csproj.GenerateResource.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.csproj.CoreCompileInputs.cache
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.exe
+D:\Основы программирования\C Sharp\Klyushin_Homework_7\Task_2\obj\Debug\Task_2.pdb

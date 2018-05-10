@@ -56,6 +56,7 @@
             this.tbEnteredNumber.Size = new System.Drawing.Size(54, 20);
             this.tbEnteredNumber.TabIndex = 1;
             this.tbEnteredNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbEnteredNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnCompare_Click);
             this.tbEnteredNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEnteredNumber_KeyPress);
             // 
             // lblResult
